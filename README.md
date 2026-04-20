@@ -14,6 +14,15 @@
 - age
 - isActive
 
+```js
+const students = [
+  { name: "Іван", age: 20, isActive: true },
+  { name: "Марія", age: 22, isActive: false },
+  { name: "Олег", age: 19, isActive: true },
+  { name: "Анна", age: 21, isActive: false },
+];
+```
+
 1. Створи компонент `StudentList`, який:
    - отримує масив через props
    - рендерить список через `.map()`
@@ -44,6 +53,15 @@
 - price
 - inStock
 
+```js
+const products = [
+  { title: "Ноутбук", price: 25000, inStock: true },
+  { title: "Мишка", price: 500, inStock: true },
+  { title: "Клавіатура", price: 1200, inStock: false },
+  { title: "Монітор", price: 7000, inStock: true },
+];
+```
+
 1. Створи компонент `ProductList`:
    - отримує масив товарів
    - рендерить список
@@ -71,6 +89,15 @@
 
 - text
 - isRead
+
+```js
+const messages = [
+  { text: "Привіт! Як справи?", isRead: true },
+  { text: "Не забудь про заняття завтра", isRead: false },
+  { text: "Я надіслав тобі файл", isRead: true },
+  { text: "Передзвони мені, будь ласка", isRead: false },
+];
+```
 
 1. Створи компонент `MessageList`:
    - отримує масив
@@ -101,6 +128,15 @@
 - level (наприклад: A1, A2, B1)
 - isCompleted
 
+```js
+const courses = [
+  { title: "Basic English", level: "A1", isCompleted: true },
+  { title: "Pre-Intermediate English", level: "A2", isCompleted: false },
+  { title: "React Basics", level: "B1", isCompleted: false },
+  { title: "JavaScript Advanced", level: "B2", isCompleted: true },
+];
+```
+
 1. Створи компонент `CourseList`:
    - отримує масив курсів
    - рендерить список
@@ -129,6 +165,15 @@
 - id
 - totalPrice
 - isPaid
+
+```js
+const orders = [
+  { id: 101, totalPrice: 1500, isPaid: true },
+  { id: 102, totalPrice: 3200, isPaid: false },
+  { id: 103, totalPrice: 800, isPaid: true },
+  { id: 104, totalPrice: 5400, isPaid: false },
+];
+```
 
 1. Створи компонент `OrderList`:
    - отримує масив замовлень
