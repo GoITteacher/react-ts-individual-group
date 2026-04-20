@@ -1,73 +1,148 @@
-# React + TypeScript + Vite
+## React Practice Tasks (Task1–Task5)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+### 🧩 Задача 1: Список студентів
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+#### 📌 Умова:
 
-## React Compiler
+Створи компонент `Task1`, у якому зберігається масив студентів:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Кожен студент:
 
-## Expanding the ESLint configuration
+- name
+- age
+- isActive
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Створи компонент `StudentList`, який:
+   - отримує масив через props
+   - рендерить список через `.map()`
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2. Створи компонент `StudentItem`, який:
+   - отримує одного студента
+   - відображає ім’я та вік
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+3. Додай умовний рендеринг:
+   - `isActive === true` → `Активний`
+   - `isActive === false` → `Неактивний`
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+4. Якщо масив пустий → показати `Немає студентів`
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+5. Передай індекс і відобрази його (#1, #2, ...)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 🧩 Задача 2: Список товарів
+
+#### 📌 Умова:
+
+Створи компонент `Task2`, у якому є масив товарів:
+
+Кожен товар:
+
+- title
+- price
+- inStock
+
+1. Створи компонент `ProductList`:
+   - отримує масив товарів
+   - рендерить список
+
+2. Створи компонент `ProductItem`:
+   - відображає назву і ціну
+
+3. Додай умовний рендеринг:
+   - якщо `inStock === true` → `Є в наявності`
+   - якщо `false` → `Немає в наявності`
+
+4. Якщо товарів немає → `Список товарів пустий`
+
+5. Додай нумерацію товарів
+
+---
+
+### 🧩 Задача 3: Список повідомлень
+
+#### 📌 Умова:
+
+Створи компонент `Task3`, у якому є масив повідомлень:
+
+Кожне повідомлення:
+
+- text
+- isRead
+
+1. Створи компонент `MessageList`:
+   - отримує масив
+   - рендерить список
+
+2. Створи компонент `MessageItem`:
+   - показує текст повідомлення
+
+3. Додай умовний рендеринг:
+   - якщо `isRead === true` → `Прочитано`
+   - якщо `false` → `Нове повідомлення`
+
+4. Якщо повідомлень немає → `Повідомлень немає`
+
+5. Додай відображення порядкового номера
+
+---
+
+### 🧩 Задача 4: Список курсів
+
+#### 📌 Умова:
+
+Створи компонент `Task4`, у якому є масив курсів:
+
+Кожен курс:
+
+- title
+- level (наприклад: A1, A2, B1)
+- isCompleted
+
+1. Створи компонент `CourseList`:
+   - отримує масив курсів
+   - рендерить список
+
+2. Створи компонент `CourseItem`:
+   - відображає назву і рівень
+
+3. Додай умовний рендеринг:
+   - якщо `isCompleted === true` → `Завершено`
+   - якщо `false` → `В процесі`
+
+4. Якщо курсів немає → `Курсів поки немає`
+
+5. Додай номер кожного курсу
+
+---
+
+### 🧩 Задача 5: Список замовлень
+
+#### 📌 Умова:
+
+Створи компонент `Task5`, у якому є масив замовлень:
+
+Кожне замовлення:
+
+- id
+- totalPrice
+- isPaid
+
+1. Створи компонент `OrderList`:
+   - отримує масив замовлень
+   - рендерить список
+
+2. Створи компонент `OrderItem`:
+   - відображає id та суму
+
+3. Додай умовний рендеринг:
+   - якщо `isPaid === true` → `Оплачено`
+   - якщо `false` → `Не оплачено`
+
+4. Якщо замовлень немає → `Замовлень немає`
+
+5. Додай порядковий номер елемента
+
+---
