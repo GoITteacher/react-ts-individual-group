@@ -1,0 +1,11 @@
+.car-item {
+  width: 150px;
+  height: 200px;
+  border: 1px solid teal;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin: 10px;
+}
