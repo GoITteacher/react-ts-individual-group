@@ -1,10 +1,13 @@
-import Task1 from "./components/Task1/Task1";
-import Task3 from "./components/Task3/Task3";
+import Books from "./components/Books/Books";
+import Cocktails from "./components/Cocktails/Cocktails";
+import Lessons from "./components/Lessons/Lessons";
+import Navigation from "./components/Navigation/Navigation";
 
 const App = () => {
   return (
     <div>
-      <Task3 />
+      {/* <Books /> */}
+      <Lessons />
     </div>
   );
 };
