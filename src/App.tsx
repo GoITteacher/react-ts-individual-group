@@ -1,21 +1,21 @@
-import Counter from "./components/Counter/Counter";
-import LikeButton from "./components/LikeButton/LikeButton";
-import MessageToggle from "./components/MessageToggle/MessageToggle";
-import Reviews from "./components/Reviews/Reviews";
-import ThemeSwitcher from "./components/ThemeSwitcher/ThemeSwitcher";
-import UserProfile from "./components/UserProfile/UserProfile";
-import UserProfile2 from "./components/UserProfile2/UserProfile2";
+import CarList from "./components/effect/CarList/CarList";
+import ColorSwitcher from "./components/lesson-2/ColorSwitcher/ColorSwitcher";
+import EmojiReaction from "./components/lesson-2/EmojiReaction/EmojiReaction";
+import FontSizeChanger from "./components/lesson-2/FontSizeChanger/FontSizeChanger";
+import GreetingCard from "./components/lesson-2/GreetingCard/GreetingCard";
+import LoginStatus from "./components/lesson-2/LoginStatus/LoginStatus";
+import VolumeControl from "./components/lesson-2/VolumeControl/VolumeControl";
 
 const App = () => {
   return (
     <div>
-      {/* <Counter /> */}
-      {/* <ThemeSwitcher />
-      <MessageToggle />
-      <LikeButton /> */}
-      {/* <Reviews /> */}
-      {/* <UserProfile /> */}
-      <UserProfile2 />
+      {/* <ColorSwitcher /> */}
+      {/* <GreetingCard /> */}
+      {/* <VolumeControl /> */}
+      {/* <LoginStatus /> */}
+      {/* <FontSizeChanger /> */}
+      {/* <EmojiReaction /> */}
+      <CarList />
     </div>
   );
 };
