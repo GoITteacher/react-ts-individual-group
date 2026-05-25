@@ -4,7 +4,6 @@ import type { Cars2 } from "../../../types/cars";
 import CarListModal from "./CarListModal/CarListModal";
 
 const Cars = () => {
-  const [car, setCar] = useState<Cars2[]>([]);
   const [isOpenModal, setIsOpenModal] = useState(false);
 
   const openModal = () => {
@@ -27,24 +26,22 @@ const Cars = () => {
 export default Cars;
 
 //!=========================================
-const objA = {
-  x: 10,
-  y: 20,
-};
+// const objA = {
+//   x: 10,
+//   y: 20,
+// };
 
-const objB = objA;
+// const objB = objA;
 
-objB.x = 25;
+// objB.x = 25;
 
-//!=========================================
+// //!=========================================
 
-function foo(callback) {
-  callback();
-}
+// function foo(value) {
+//   value();
+// }
 
-//!=========================================
+// //!=========================================
 
-function test() {
-  console.log("test");
-}
-foo(test);
+// const x = () => {};
+// foo(x);
