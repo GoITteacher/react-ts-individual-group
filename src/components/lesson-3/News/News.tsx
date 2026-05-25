@@ -5,6 +5,7 @@ import { getNews } from "../../../api/newsApi";
 
 const News = () => {
   const [news, setNews] = useState<Article[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
   const [isOpenModal, setIsOpenModal] = useState(false);
 
   const handleOpenModal = () => {
@@ -18,8 +19,10 @@ const News = () => {
   useEffect(() => {
     async function fetchData() {
       if (isOpenModal) {
+        setIsLoading(true);
         const data = await getNews();
         setNews(data.items);
+        setIsLoading(false);
       }
     }
     fetchData();
@@ -28,6 +31,8 @@ const News = () => {
   return (
     <div className={css["news"]}>
       <button onClick={handleOpenModal}>Open news modal</button>
+
+      {isLoading && <p>Loading</p>}
 
       {isOpenModal && (
         <div>
