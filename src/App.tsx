@@ -5,6 +5,8 @@ import FontSizeChanger from "./components/lesson-2/FontSizeChanger/FontSizeChang
 import GreetingCard from "./components/lesson-2/GreetingCard/GreetingCard";
 import LoginStatus from "./components/lesson-2/LoginStatus/LoginStatus";
 import VolumeControl from "./components/lesson-2/VolumeControl/VolumeControl";
+import Cars from "./components/lesson-3/Cars/cars";
+import News from "./components/lesson-3/News/News";
 
 const App = () => {
   return (
@@ -15,7 +17,9 @@ const App = () => {
       {/* <LoginStatus /> */}
       {/* <FontSizeChanger /> */}
       {/* <EmojiReaction /> */}
-      <CarList />
+      {/* <CarList /> */}
+      <News />
+      <Cars />
     </div>
   );
 };
