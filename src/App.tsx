@@ -6,7 +6,7 @@ import GreetingCard from "./components/lesson-2/GreetingCard/GreetingCard";
 import LoginStatus from "./components/lesson-2/LoginStatus/LoginStatus";
 import VolumeControl from "./components/lesson-2/VolumeControl/VolumeControl";
 import Cars from "./components/lesson-3/Cars/cars";
-import News from "./components/lesson-3/News/News";
+import News from "./components/lesson-4/News/News";
 
 const App = () => {
   return (
@@ -18,8 +18,9 @@ const App = () => {
       {/* <FontSizeChanger /> */}
       {/* <EmojiReaction /> */}
       {/* <CarList /> */}
+      {/* <News /> */}
+      {/* <Cars /> */}
       <News />
-      <Cars />
     </div>
   );
 };
