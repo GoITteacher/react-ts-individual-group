@@ -13,6 +13,8 @@ import Books from "./components/lesson-5/Books/Books";
 import Cars from "./components/lesson-5/Cars/Cars";
 import CarsList from "./components/lesson-5/CarsList/CarsList";
 import UsersList from "./components/lesson-5/UsersLists/UsersList";
+import Cocktails from "./components/Lesson-6/Cocktails/Cocktails";
+import Products from "./components/Lesson-6/Products/Products";
 
 const App = () => {
   return (
@@ -27,11 +29,15 @@ const App = () => {
       {/* <News /> */}
       {/* <Cars /> */}
       {/* <News /> */}
-      <UsersList />
+      {/* <UsersList />
       <CarsList />
       <Cars />
-      <Articles />
+      <Articles /> */}
       {/* <Books /> */}
+
+      {/* <Cocktails /> */}
+
+      <Products />
     </div>
   );
 };
