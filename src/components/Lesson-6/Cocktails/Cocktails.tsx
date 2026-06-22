@@ -2,33 +2,19 @@ import { useState } from "react";
 import css from "./Cocktails.module.css";
 import { useQuery } from "@tanstack/react-query";
 import { getCocktails, getRandomCocktails } from "../../../api/cocktailsApi";
+import { useCocktails } from "../../../hooks/useCocktails";
 
 interface CocktailsProps {}
 
 const Cocktails = ({}: CocktailsProps) => {
   const [value, setValue] = useState("");
 
+  const { isError, cocktails, isLoading } = useCocktails(value);
+
   const handleSubmit = (formData: FormData) => {
     const name = formData.get("name") as string;
     setValue(name);
   };
-
-  const cocktailsQuery = useQuery({
-    queryKey: ["cocktails", { s: value }],
-    queryFn: () => getCocktails({ s: value }),
-    retry: false,
-    enabled: value.length > 0,
-  });
-
-  const cocktailsRandomQuery = useQuery({
-    queryKey: ["randomCocktails"],
-    queryFn: () => getRandomCocktails(),
-    retry: false,
-  });
-
-  const cocktails = cocktailsQuery.data || cocktailsRandomQuery.data || [];
-  const isLoading = cocktailsQuery.isLoading;
-  const isError = cocktailsQuery.isError;
 
   return (
     <div className={css["cocktails"]}>

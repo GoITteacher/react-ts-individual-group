@@ -1,20 +1,8 @@
-import { useEffect, useState } from "react";
 import css from "./Cars.module.css";
-import { useQuery } from "@tanstack/react-query";
-import { getCars } from "../../../api/carsApi";
+import { useCars } from "../../../hooks/useCars";
 
 const Cars = () => {
-  //   const {data, isLoading, isError, error} = useQuery();
-
-  const carsQuery = useQuery({
-    queryKey: ["cars"],
-    queryFn: () => getCars(1),
-  });
-
-  const handleRefetch = carsQuery.refetch;
-  const cars = carsQuery.data?.items || [];
-  const isLoading = carsQuery.isLoading;
-  const isError = carsQuery.isError;
+  const { handleRefetch, cars, isLoading } = useCars();
 
   return (
     <div className={css["cars"]}>

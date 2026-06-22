@@ -1,15 +1,8 @@
-import { useQuery } from "@tanstack/react-query";
 import css from "./UsersList.module.css";
-import { fetchUsers } from "../../../api/users";
+import { useUsersList } from "../../../hooks/useUsersList";
 
 const UsersList = () => {
-  const usersListQuery = useQuery({
-    queryKey: ["users"],
-    queryFn: () => fetchUsers(),
-  });
-  const usersList = usersListQuery.data || [];
-  const isLoading = usersListQuery.isLoading;
-  const error = usersListQuery.error;
+  const { usersList, isLoading } = useUsersList();
   return (
     <div className={css["usersList"]}>
       {isLoading && <p>Loading...</p>}

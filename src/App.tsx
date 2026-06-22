@@ -15,6 +15,7 @@ import CarsList from "./components/lesson-5/CarsList/CarsList";
 import UsersList from "./components/lesson-5/UsersLists/UsersList";
 import Cocktails from "./components/Lesson-6/Cocktails/Cocktails";
 import Products from "./components/Lesson-6/Products/Products";
+import FormExample from "./components/lesson-7/FormExample/FormExample";
 
 const App = () => {
   return (
@@ -37,7 +38,9 @@ const App = () => {
 
       {/* <Cocktails /> */}
 
-      <Products />
+      {/* <Products /> */}
+
+      <FormExample />
     </div>
   );
 };

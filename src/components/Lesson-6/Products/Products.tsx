@@ -7,6 +7,7 @@ import type { NewProduct } from "../../../types/product";
 const Products = () => {
   const [cart, setCart] = useState<NewProduct[]>([]);
   const [value, setValue] = useState("");
+
   const handleSubmit = (formData: FormData) => {
     const value = formData.get("keywords") as string;
     setValue(value);

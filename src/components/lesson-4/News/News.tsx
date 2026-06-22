@@ -1,39 +1,20 @@
 import { useEffect, useState } from "react";
 import css from "./News.module.css";
-import { getNews2 } from "../../../api/news2Api";
 import type { News } from "../../../types/news";
 import NewsCard from "./NewsCard/NewsCard";
+import { useNews, usePagination } from "../../../hooks/useNews";
 
 const News = () => {
   const [query, setQuery] = useState("");
   const [arr, setArr] = useState<News[]>([]);
+  const { handleIncrement, handleDecrenment, page, setPage } = usePagination();
+  useNews(query, page, setArr);
 
-  const [page, setPage] = useState(1);
-
-  const handleIncrement = () => {
-    setPage(page + 1);
-  };
-  const handleDecrenment = () => {
-    if (page > 1) {
-      setPage(page - 1);
-    }
-  };
   const handleSubmit = (formData: FormData) => {
     const value = formData.get("value") as string;
     setQuery(value);
     setPage(1);
   };
-
-  useEffect(() => {
-    async function fetchData() {
-      if (query) {
-        const data = await getNews2(query, page);
-        setArr(data.articles);
-      }
-    }
-
-    fetchData();
-  }, [query, page]);
 
   return (
     <div className={css["news"]}>
