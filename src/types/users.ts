@@ -21,3 +21,8 @@ export interface User {
     bs: string;
   };
 }
+
+export interface User8 {
+  firstname: string;
+  lastname: string;
+}

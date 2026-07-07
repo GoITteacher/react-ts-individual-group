@@ -18,6 +18,7 @@ import Products from "./components/Lesson-6/Products/Products";
 import Form1 from "./components/lesson-7/Form1/Form1";
 import Form2 from "./components/lesson-7/Form2/Form-2";
 import FormExample from "./components/lesson-7/FormExample/FormExample";
+import Lesson8 from "./components/lesson-8/Lesson8";
 
 const App = () => {
   return (
@@ -44,7 +45,8 @@ const App = () => {
 
       {/* <FormExample /> */}
       {/* <Form1></Form1> */}
-      <Form2 />
+      {/* <Form2 /> */}
+      <Lesson8 />
     </div>
   );
 };
