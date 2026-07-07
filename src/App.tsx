@@ -15,6 +15,8 @@ import CarsList from "./components/lesson-5/CarsList/CarsList";
 import UsersList from "./components/lesson-5/UsersLists/UsersList";
 import Cocktails from "./components/Lesson-6/Cocktails/Cocktails";
 import Products from "./components/Lesson-6/Products/Products";
+import Form1 from "./components/lesson-7/Form1/Form1";
+import Form2 from "./components/lesson-7/Form2/Form-2";
 import FormExample from "./components/lesson-7/FormExample/FormExample";
 
 const App = () => {
@@ -40,7 +42,9 @@ const App = () => {
 
       {/* <Products /> */}
 
-      <FormExample />
+      {/* <FormExample /> */}
+      {/* <Form1></Form1> */}
+      <Form2 />
     </div>
   );
 };
