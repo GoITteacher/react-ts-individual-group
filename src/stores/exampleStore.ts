@@ -17,54 +17,62 @@
 //   removeUser: (userId: string) => void;
 // }
 
+// export const useMyStore = create<BankAccountStore>()((setStore)=>{
+//   return {
+//     balance: number;
+//   accountID: string;
+//   transactions: Transaction[];
+//   users: User[];
+
+//   deposit: (money: number) =>{
+//     setStore(store=>{
+//       return {}
+//     })
+//   }
+
+//   }
+// })
+
 // export const useBankAccountStore = create<BankAccountStore>()((setStore) => {
 //   return {
 //     balance: 0,
-//     accountID: "",
-//     transactions: [],
+//     accountId: "",
+//     transaction: [],
 //     users: [],
 
 //     deposit: (money: number) => {
 //       setStore((store) => {
-//         return { balance: store.balance + money };
+//         return {};
 //       });
 //     },
 
-//     withdraw: (money: number) => {
+//     withdraw: (money) => {
 //       setStore((store) => {
-//         return { balance: store.balance - money };
+//         return {};
 //       });
 //     },
 
-//     setAccountId: (newId: string) => {
+//     setAccountId: (newId) => {
 //       setStore((store) => {
-//         return {
-//           accountID: newId,
-//         };
+//         return {};
 //       });
 //     },
 
-//     addTransaction: (item: Transaction) => {
+//     addTransaction: (transaction) => {
 //       setStore((store) => {
-//         return {
-//           transactions: [...store.transactions, item],
-//         };
+//         return {};
 //       });
 //     },
 
-//     addUser: (user: User) => {
+//     addUser: (user) => {
 //       setStore((store) => {
-//         return {
-//           users: [...store.users, user],
-//         };
+//         return {};
 //       });
 //     },
 
-//     removeUser: (userId: string) => {
+//     removeUser: () => {
 //       setStore((store) => {
-//         return {
-//           users: store.users.filter((el) => el._id !== userId),
-//         };
+//         return {};
 //       });
 //     },
 //   };
