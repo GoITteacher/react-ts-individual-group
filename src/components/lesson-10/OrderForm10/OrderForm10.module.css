@@ -1,0 +1,133 @@
+.orderForm10 {
+  min-height: 100vh;
+  padding: 48px 16px;
+  background: #eef2f7;
+  color: #172033;
+  font-family: Arial, sans-serif;
+}
+
+.orderForm10 form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #d7deea;
+  border-radius: 8px;
+  box-shadow: 0 18px 40px rgba(23, 32, 51, 0.12);
+}
+
+.orderForm10 fieldset {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 16px 20px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.orderForm10 label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.orderForm10 fieldset > label:has(input) {
+  grid-column: 1 / -1;
+}
+
+.orderForm10 input,
+.orderForm10 select {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #c5cede;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #172033;
+  font: inherit;
+  outline: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.orderForm10 input::placeholder {
+  color: #9aa4b5;
+}
+
+.orderForm10 input:focus,
+.orderForm10 select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.16);
+}
+
+.orderForm10 input:hover,
+.orderForm10 select:hover {
+  border-color: #8fa0b8;
+}
+
+.orderForm10 input[type="color"] {
+  height: 44px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.orderForm10 input[type="radio"] {
+  width: 18px;
+  min-height: 18px;
+  accent-color: #2563eb;
+}
+
+.orderForm10 fieldset > div {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px;
+  background: #f8fafc;
+  border: 1px solid #dbe3ef;
+  border-radius: 8px;
+}
+
+.orderForm10 fieldset > div label {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 8px 12px;
+  background: #ffffff;
+  border: 1px solid #d7deea;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.orderForm10 fieldset > div label:hover {
+  border-color: #2563eb;
+}
+
+@media (max-width: 640px) {
+  .orderForm10 {
+    padding: 24px 12px;
+  }
+
+  .orderForm10 form {
+    padding: 20px;
+  }
+
+  .orderForm10 fieldset {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .orderForm10 input,
+  .orderForm10 select {
+    margin-bottom: 8px;
+  }
+}

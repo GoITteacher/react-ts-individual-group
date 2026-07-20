@@ -8,6 +8,8 @@
 // import Cars from "./components/lesson-3/Cars/cars";
 // import News from "./components/lesson-4/News/News";
 
+import FormExample from "./components/lesson-10/Forms/FormExample/FormExample";
+import OrderForm10 from "./components/lesson-10/OrderForm10/OrderForm10";
 import Articles from "./components/lesson-5/Articles/Articles";
 import Books from "./components/lesson-5/Books/Books";
 import Cars from "./components/lesson-5/Cars/Cars";
@@ -17,7 +19,7 @@ import Cocktails from "./components/Lesson-6/Cocktails/Cocktails";
 import Products from "./components/Lesson-6/Products/Products";
 import Form1 from "./components/lesson-7/Form1/Form1";
 import Form2 from "./components/lesson-7/Form2/Form-2";
-import FormExample from "./components/lesson-7/FormExample/FormExample";
+// import FormExample from "./components/lesson-7/FormExample/FormExample";
 import Lesson8 from "./components/lesson-8/Lesson8";
 import Task1 from "./components/lesson-9/Task1/Task1";
 
@@ -48,7 +50,9 @@ const App = () => {
       {/* <Form1></Form1> */}
       {/* <Form2 /> */}
       {/* <Lesson8 /> */}
-      <Task1 />
+      {/* <Task1 /> */}
+
+      <OrderForm10 />
     </div>
   );
 };
